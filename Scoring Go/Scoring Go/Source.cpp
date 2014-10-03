@@ -5,6 +5,7 @@
 #include <fstream>
 #include <string>
 #include <vector>
+#include <stack>
 using namespace std;
 
 const string INPUT = "go.in";
@@ -61,6 +62,7 @@ void main()
 		int boardSize, numBlack, numWhite;
 		vector<Coordinate> BlackCoordinates;
 		vector<Coordinate> WhiteCoordinates;
+		stack<Coordinates> Stack;
 
 		// largest boardsize + 1 on each side
 		// also starts at 1,1 instead of 0,0
@@ -95,6 +97,18 @@ void main()
 				for (int j = 0; j < boardSize + 1; j++)
 					if (boardArray[i][j] != 2 && boardArray[i][j] != 3)
 						boardArray[i][j] = 1;
+
+			// Score Game
+			for (int i = 1; i <= boardSize; i++)
+			{
+				for (int j = 1; j <= boardSize; j++)
+				{
+					if (boardArray[i][j] == 1)
+					{
+
+					}
+				}
+			}
 
 			fin >> boardSize >> numBlack >> numWhite;
 		}
